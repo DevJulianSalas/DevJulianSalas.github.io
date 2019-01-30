@@ -1,13 +1,30 @@
 <template>
-  <div>
-    <nuxt />
+  <div class="container">
+    <header class="header">
+      <Header />
+    </header>
+    <section class="main">
+      <p>prueba main</p>
+    </section>
+    <footer>
+      <p>footer</p>
+    </footer>
   </div>
 </template>
+<script>
+import Header from '../components/Header'
+export default {
+  components: {
+    Header
+  }
+}
+</script>
 
 <style>
 html {
-  font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI',
-    Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-family: 'Poppins', sans-serif;
+  /* font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI',
+    Roboto, 'Helvetica Neue', Arial, sans-serif; */
   font-size: 16px;
   word-spacing: 1px;
   -ms-text-size-adjust: 100%;
@@ -16,40 +33,42 @@ html {
   -webkit-font-smoothing: antialiased;
   box-sizing: border-box;
 }
-
-*,
-*:before,
-*:after {
-  box-sizing: border-box;
-  margin: 0;
+* {
+  padding: 0%;
+  margin: 0%;
 }
 
-.button--green {
-  display: inline-block;
-  border-radius: 4px;
-  border: 1px solid #3b8070;
-  color: #3b8070;
-  text-decoration: none;
-  padding: 10px 30px;
+h2 {
+  font-family: 'Dosis', sans-serif !important;
+  color: #232332;
+  font-weight: 500;
+  letter-spacing: 5px;
 }
 
-.button--green:hover {
-  color: #fff;
-  background-color: #3b8070;
+p {
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 24px;
+  color: #555;
+  margin-bottom: 15px;
 }
 
-.button--grey {
-  display: inline-block;
-  border-radius: 4px;
-  border: 1px solid #35495e;
-  color: #35495e;
-  text-decoration: none;
-  padding: 10px 30px;
-  margin-left: 15px;
+.container {
+  display: flex;
+  flex-flow: row wrap;
 }
 
-.button--grey:hover {
-  color: #fff;
-  background-color: #35495e;
+.container > * {
+  flex: 1 100%;
+}
+
+.header {
+  height: 500px;
+  width: 100%;
+}
+
+.main {
+  width: 100%;
+  flex: 1;
 }
 </style>
