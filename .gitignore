@@ -70,7 +70,11 @@ typings/
 
 # Nuxt generate
 dist
-
+.nuxt
+_nuxt
+index.html
+200.html
+.nojekyll
 # vuepress build output
 .vuepress/dist
 
