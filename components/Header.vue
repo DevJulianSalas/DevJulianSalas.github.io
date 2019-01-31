@@ -1,33 +1,41 @@
 <template>
   <div>
-    <el-row justify="center" type="flex" style="margin: 10px;">
-      <el-col :span="24">
+    <el-row type="flex" align="center" style="margin: 16px;">
+      <el-col :span="4">
         <p>logo</p>
+      </el-col>
+      <el-col :span="20">
+        <Menu />
       </el-col>
     </el-row>
     <div class="group-message-me">
       <el-row justify="center" type="flex" style="margin: 10px;" align="bottom">
-      <el-col class="message-front" :span="24">
-        I am Julian Salas <span style="color:#f95231">
-          .
-        </span>
-      </el-col>
-    </el-row>
-    <el-row justify="center" type="flex">
-      <el-col class="message-me" :span="15">
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio rem in repudiandae. Repellendus sint rem error dolorem tenetur, iste aliquid ipsam quam. Provident deleniti in quo architecto ea, nemo qui.</p>
-      </el-col>
-    </el-row>  
+        <el-col class="message-front" :span="24">
+          Hello! <br>I'm a fullstack developer<span style="color:#f95231">
+            .
+          </span>
+        </el-col>
+      </el-row>
+      <el-row justify="center" type="flex">
+        <el-col class="message-me" :span="15">
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio rem in repudiandae. Repellendus sint rem error dolorem tenetur, iste aliquid ipsam quam. Provident deleniti in quo architecto ea, nemo qui.</p>
+        </el-col>
+      </el-row>
     </div>
   </div>
 </template>
 <script>
-export default {}
+import Menu from '../components/Menu'
+export default {
+  components: {
+    Menu
+  }
+}
 </script>
 <style scoped>
 .group-message-me {
   position: absolute;
-  top: 30%;
+  top: 25%;
 }
 .message-front {
   font-family: 'Poppins', sans-serif;

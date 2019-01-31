@@ -4,7 +4,7 @@
       <Header />
     </header>
     <section class="main">
-      <p>prueba main</p>
+      <nuxt />
     </section>
     <footer>
       <p>footer</p>
@@ -51,6 +51,19 @@ p {
   line-height: 24px;
   color: #555;
   margin-bottom: 15px;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 13px;
+  color: #082639;
+  font-family: 'Poppins', sans-serif;
+  padding: 20px;
 }
 
 .container {
