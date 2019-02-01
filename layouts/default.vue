@@ -38,13 +38,6 @@ html {
   margin: 0%;
 }
 
-h2 {
-  font-family: 'Dosis', sans-serif !important;
-  color: #232332;
-  font-weight: 500;
-  letter-spacing: 5px;
-}
-
 p {
   font-size: 14px;
   font-weight: normal;
@@ -64,6 +57,17 @@ a {
   color: #082639;
   font-family: 'Poppins', sans-serif;
   padding: 20px;
+  font-weight: 10;
+}
+
+h2 {
+  color: #11242c;
+  margin: 0 0 10px;
+  text-transform: none;
+  font-weight: 400;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 240%;
+  letter-spacing: -1px;
 }
 
 .container {
