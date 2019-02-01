@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # DevJulianSalas.github.io
 
 > The code to the portafolio
@@ -21,6 +22,8 @@ $ yarn run generate
 
 For detailed explanation on how things work, checkout [Nuxt.js docs](https://nuxtjs.org).
 
+=======
+>>>>>>> 1a49d678ebaf33abf0eac253d0a76a950c7da0ba
 # STATIC
 
 **This directory is not required, you can delete it if you don't want to use it.**
