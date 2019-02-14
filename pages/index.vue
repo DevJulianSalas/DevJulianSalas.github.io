@@ -32,13 +32,16 @@
       </el-row>
     </section>
     <Services/>
+    <Experience/>
   </div>
 </template>
 <script>
 import Services from '../components/Services'
+import Experience from '../components/Experience'
 export default {
   components: {
-    Services
+    Services,
+    Experience
   }
 }
 </script>
