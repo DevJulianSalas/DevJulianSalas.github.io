@@ -31,7 +31,8 @@ export default {
     },
     subtext: {
       required: true,
-      type: String
+      type: String,
+      default: ''
     }
   }
 }

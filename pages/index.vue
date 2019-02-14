@@ -31,17 +31,46 @@
         </el-col>
       </el-row>
     </section>
-    <Services/>
-    <Experience/>
+    <Services />
+    <Experience />
+    <MyProjects />
+    <Blog 
+      :postmedium="postMedium" 
+    />
   </div>
 </template>
 <script>
+import axios from 'axios'
 import Services from '../components/Services'
 import Experience from '../components/Experience'
+import MyProjects from '../components/Projects'
+import Blog from '../components/Blog'
 export default {
   components: {
     Services,
-    Experience
+    Experience,
+    MyProjects,
+    Blog
+  },
+  async asyncData({ $axios }) {
+    try {
+      const mediumUrl = `
+      https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fmedium.com%2Ffeed%2F%40Medium`
+      const { data, status } = await axios.get(mediumUrl)
+      if (status === 200) {
+        const items = data.items.slice(0, 4)
+        return {
+          postMedium: items
+        }
+      }
+    } catch (error) {
+      throw new Error(error)
+    }
+  },
+  data: function() {
+    return {
+      postMedium: []
+    }
   }
 }
 </script>
@@ -62,5 +91,13 @@ p {
 .me {
   width: 80%;
   max-width: 100%;
+}
+.subtext {
+  font-size: 14px;
+  line-height: 34px;
+  text-transform: capitalize;
+  color: #555;
+  font-size: 14px;
+  font-weight: 548;
 }
 </style>

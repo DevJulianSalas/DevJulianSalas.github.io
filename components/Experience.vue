@@ -1,7 +1,7 @@
 <template>
   <div>
     <SubHeader
-      subheader="My experience"
+      subheader="my experience"
       :subtext="experienceText"
     />
     <el-row
