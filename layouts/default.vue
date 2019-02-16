@@ -1,13 +1,13 @@
 <template>
-  <div class="container">
-    <header class="header">
-      <Header />
-    </header>
+  <div>
+    <Header />
     <section class="main">
       <nuxt />
     </section>
-    <footer>
-      <p>footer</p>
+    <footer style="height: 50px; background: #35495e;">
+      <p style="text-align: right; color: #ffffff; margin: 10px;">
+        Developed with Nuxtjs by © 2019 Julian Salas
+      </p>
     </footer>
   </div>
 </template>
@@ -36,6 +36,7 @@ html {
 * {
   padding: 0%;
   margin: 0%;
+  box-sizing: border-box;
 }
 
 p {
@@ -77,11 +78,6 @@ h2 {
 
 .container > * {
   flex: 1 100%;
-}
-
-.header {
-  height: 500px;
-  width: 100%;
 }
 
 .main {

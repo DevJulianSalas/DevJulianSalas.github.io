@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div style="margin: 50px;">
     <SubHeader 
       subheader="my medium post"
       :subtext="myPostsText"
@@ -12,7 +12,7 @@
         v-for="(item, index) in postmedium"
         :key="index"
         :span="9"
-        style="width: 40%"
+        style="width: 30%"
       >
         <el-card 
           :body-style="{ padding: '0px' }"
@@ -77,7 +77,6 @@ export default {
   padding-top: 30px;
 }
 .card-whole {
-  height: 460px;
   width: 90%;
   margin: 30px;
 }

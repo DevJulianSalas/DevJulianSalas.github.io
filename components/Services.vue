@@ -1,27 +1,9 @@
 <template>
   <div>
-    <el-row
-      type="flex"
-      justify="center"
-      class="services"
-    >
-      <el-col 
-        :span="24"
-        style="text-align: center;"
-      >
-        <h2>
-          what I love to do <span style="color:#f95231">
-            .
-          </span>
-        </h2>
-      </el-col>
-      <el-col 
-        :span="16"
-        style="padding-top:5px;"
-      >
-        <p>Nunc Placerat Mi Id Nisi Interdum Mollis. Scelerisque Mattis, Leo Quam Aliquet Diam, Congue Laoreet Elit Metus Eget Diam.</p>
-      </el-col>
-    </el-row>
+    <SubHeader 
+      subheader="What i love to do"
+      :subtext="myServices"
+    />
     <el-row
       type="flex"
       justify="center"
@@ -30,52 +12,47 @@
       <el-col
         v-for="(item, index) in services"
         :key="index"
-        :span="8"
+        :span="6"
         style="text-align: center;"
       >
-        <div>
-          <span>{{item.name}}</span>
-          <span>{{item.icon}}</span>
+        <div style="margin: 20px;">
+          <i :class="item.icon" style="width: 42px; height: 42px; color: #42b883;"/>
+          <p style="color: #11242c;">{{ item.name }}</p>
+          <!-- <p>{{ item.description }}</p> -->
         </div>
-        <p>{{item.description}}</p>
       </el-col>
     </el-row>
   </div>
 </template>
 <script>
+import SubHeader from './SubHeader'
 export default {
+  components: {
+    SubHeader
+  },
   data: function() {
     return {
+      myServices: 'lorem lorel lorem',
       services: [
         {
-          name: 'Branding',
-          description: `Fringilla augue at maximus vesti Nam pulvinar vitae neque etrolling freight.`,
-          icon: 'text'
+          name: 'Backend',
+          icon: 'fas fa-server',
+          description: `Let me create scalable backends with the best stack.`
         },
         {
-          name: 'Branding',
-          description: `Fringilla augue at maximus vesti Nam pulvinar vitae neque etrolling freight.`,
-          icon: 'text'
+          name: 'Frontend',
+          icon: 'fas fa-terminal',
+          description: `Let me create amazing and fast UI interfaces with javascript.`
         },
         {
-          name: 'Branding',
-          description: `Fringilla augue at maximus vesti Nam pulvinar vitae neque etrolling freight.`,
-          icon: 'text'
+          name: 'Apps',
+          icon: 'fas fa-mobile-alt',
+          description: `Let me create apps multiplaform `
         },
         {
-          name: 'Branding',
-          description: `Fringilla augue at maximus vesti Nam pulvinar vitae neque etrolling freight.`,
-          icon: 'text'
-        },
-        {
-          name: 'Branding',
-          description: `Fringilla augue at maximus vesti Nam pulvinar vitae neque etrolling freight.`,
-          icon: 'text'
-        },
-        {
-          name: 'Branding',
-          description: `Fringilla augue at maximus vesti Nam pulvinar vitae neque etrolling freight.`,
-          icon: 'text'
+          name: 'IoT',
+          icon: 'fas fa-wifi',
+          description: `Fringilla augue at maximus vesti Nam pulvinar vitae neque etrolling freight.`
         }
       ]
     }
