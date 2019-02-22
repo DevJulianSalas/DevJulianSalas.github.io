@@ -1,7 +1,7 @@
 <template>
   <div>
     <SubHeader
-      subheader="my experience"
+      subheader="My experience"
       :subtext="experienceText"
     />
     <el-row
@@ -29,8 +29,16 @@
                   {{ item.datetime }}
                 </span>
                 <span style="color: #11242c; font-size: 20px; text-transform: capitalize; font-weight: 500; flex: 1;">
-                  {{ item.company }}
+                  <a 
+                    style="color: rgb(17, 36, 44); font-size: 20px; text-transform: capitalize; font-weight: 500;" 
+                    :href="item.site" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                  >
+                    {{ item.company }}
+                  </a>
                 </span><br>
+                <br>
               </div>
             </div>
             <div slot="description">
@@ -57,17 +65,21 @@ export default {
   },
   data: function() {
     return {
-      experienceText: `Nunc Placerat Mi Id Nisi Interdum Mollis. Scelerisque Mattis, Leo Quam Aliquet Diam, Congue Laoreet Elit Metus Eget Diam.`,
+      experienceText: `
+        I have worked in cool companies of which I have learned so much and allowed me to growth personally and professionally.
+      `,
       experience: [
         {
           datetime: 'jun 2017 - present',
           company: 'xprende',
-          role: 'fullstack developer'
+          role: 'fullstack developer',
+          site: 'https://demo.xprende.com'
         },
         {
           datetime: 'dec 2017 - present',
-          company: 'infobibliotecas',
-          role: 'fullstack developer'
+          company: 'infobibliotecas - Efilm',
+          role: 'fullstack developer',
+          site: 'https://efilm.online/'
         },
         {
           datetime: 'Aug 2017 - Sep 2017',
@@ -77,12 +89,14 @@ export default {
         {
           datetime: 'Jan 2016 - Oct 2017',
           company: 'pitmmam',
-          role: 'backend developer'
+          role: 'backend developer',
+          site: 'https://www.pitmmam.com/'
         },
         {
           datetime: 'Aug 2014 - Dec 2015',
           company: 'Institute Technology Metropolitan',
-          role: 'Laboratory Manager'
+          role: 'Laboratory Manager',
+          site: 'https://www.itm.edu.co/dependencias/centro-de-laboratorios/'
         }
       ]
     }

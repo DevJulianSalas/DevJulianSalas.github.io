@@ -1,7 +1,7 @@
 <template>
   <div style="margin: 50px;">
     <SubHeader 
-      subheader="get in touch"
+      subheader="Get in touch"
       :subtext="myContactText"
     />
     <el-row 
@@ -40,6 +40,7 @@
         <el-col :span="12">
           <el-form-item
             style="width: 95%;"
+            prop="phone"
           >
             <el-input
               v-model="payload.tel"
@@ -92,7 +93,7 @@ export default {
   },
   data: function() {
     return {
-      myContactText: `Nunc Placerat Mi Id Nisi Interdum Mollis. Scelerisque Mattis, Leo Quam Aliquet Diam, Congue Laoreet Elit Metus Eget Diam.`,
+      myContactText: `If You Have A Idea In Mind Don't Doubt In Contact Me, I Will Be Happy To Hear About It And bring your idea to reality.`,
       payload: {
         name: '',
         email: '',
@@ -114,6 +115,12 @@ export default {
           }
         ],
         subject: [
+          {
+            required: true,
+            trigger: 'blur'
+          }
+        ],
+        phone: [
           {
             required: true,
             trigger: 'blur'

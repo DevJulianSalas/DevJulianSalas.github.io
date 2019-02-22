@@ -5,9 +5,15 @@
       <nuxt />
     </section>
     <footer style="height: 50px; background: #35495e;">
-      <p style="text-align: right; color: #ffffff; margin: 10px;">
-        Developed with Nuxtjs by © 2019 Julian Salas
-      </p>
+      <div style="display: flex; flex-flow: row wrap; align-items: center; justify-content: flex-end;">
+        <span style="color: #ffffff; margin: 10px; text-transform: capitalize; font-weight: 500">
+          Made <i class="fas fa-heart" style="width: 22px; height: 22px; color: #42b883;"/> 
+          with <span>
+            <a style="color: #ffffff; margin: 0px; padding: 2px;" href="https://nuxtjs.org" target="_blank" rel='noopener noreferrer'>
+              Nuxtjs
+            </a></span> by <span>Julian Salas.</span>
+        </span>
+      </div>
     </footer>
   </div>
 </template>

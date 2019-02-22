@@ -1,14 +1,34 @@
 <template>
   <div style="margin: 50px;">
     <SubHeader 
-      subheader="my medium post"
+      subheader="My medium post"
       :subtext="myPostsText"
     />
     <el-row
       type="flex"
       class="my-posts"
     >
-      <el-col 
+      <el-col :span="24">
+        <div style="display: flex; padding-bottom: 20px;">
+          <span style="flex: 1; color: #555; font-size: 34px; text-transform: capitalize; font-weight: 500; text-align: center;">
+            Comming Soon...
+          </span>
+        </div>
+      </el-col>
+      <el-col :span="24">
+        <div style="display: flex; justify-content: center; padding-top: 20px;">
+          <img src="../assets/image/images.png" alt="" height="200px;">
+        </div>
+      </el-col>
+      <el-col :span="24">
+        <div style="display: flex; padding-bottom: 20px;">
+          <span style="flex: 1; color: #555; font-size: 44px; text-transform: capitalize; font-weight: 500; text-align: center;">
+            ...
+          </span>
+        </div>
+      </el-col>
+      
+      <!-- <el-col 
         v-for="(item, index) in postmedium"
         :key="index"
         :span="9"
@@ -37,7 +57,7 @@
             </div>
           </div>
         </el-card>
-      </el-col>
+      </el-col> -->
     </el-row>
   </div>
 </template>
@@ -64,7 +84,8 @@ export default {
   data: function() {
     return {
       myPostsText: `
-      Nunc Placerat Mi Id Nisi Interdum Mollis. Scelerisque Mattis, Leo Quam Aliquet Diam, Congue Laoreet Elit Metus Eget Diam.`
+      These are a few post that I have shared with the community, I almost always try to post when I have free time.
+    `
     }
   }
 }
