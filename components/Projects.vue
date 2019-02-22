@@ -43,7 +43,7 @@ export default {
   },
   data: function() {
     return {
-      myProjectsText: `Nunc Placerat Mi Id Nisi Interdum Mollis. Scelerisque Mattis, Leo Quam Aliquet Diam, Congue Laoreet Elit Metus Eget Diam.`,
+      myProjectsText: `Here are a few recently projects that I have developed. If you have an idea or either a open source or private project don't doubt to contact me`,
       projects: [{}, {}, {}, {}]
     }
   }

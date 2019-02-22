@@ -16,9 +16,25 @@
         style="text-align: center;"
       >
         <div style="margin: 20px;">
-          <i :class="item.icon" style="width: 42px; height: 42px; color: #42b883;"/>
-          <p style="color: #11242c;">{{ item.name }}</p>
-          <!-- <p>{{ item.description }}</p> -->
+          <i :class="item.icon" style="width: 42px; height: 42px; color: #42b883;" />
+          <p style="color: #11242c; margin-bottom: 20px;">
+            {{ item.name }}
+          </p>
+          <p>
+            {{ item.description }}
+          </p>
+          <p style="color: #42b883; margin-top: 20px; margin-bottom: 40px;">
+            Stack I speak:
+          </p>
+          <div 
+            v-for="(stack, indexStack) in item.stack"
+            :key="indexStack"
+            style="padding-top: 2px;"
+          >
+            <p>
+              {{ stack }}
+            </p>
+          </div>
         </div>
       </el-col>
     </el-row>
@@ -32,27 +48,48 @@ export default {
   },
   data: function() {
     return {
-      myServices: 'lorem lorel lorem',
+      myServices: `
+        Do you have an idea in mind? guess what, I love coding and materialising ideas with the best stack that allow you a quickly scaling.
+      `,
       services: [
         {
           name: 'Backend',
           icon: 'fas fa-server',
-          description: `Let me create scalable backends with the best stack.`
+          description: `Let me create a trusly and scalable service to response   .`,
+          stack: [
+            'Django postgres',
+            'Flask mongodb',
+            'Express mongodb',
+            'Firebase'
+          ]
         },
         {
           name: 'Frontend',
           icon: 'fas fa-terminal',
-          description: `Let me create amazing and fast UI interfaces with javascript.`
+          description: `Let me build a truly, lightweight and friendly User Interface to allow the clients know about you and your amazing products.`,
+          stack: [
+            'Javascript',
+            'VueJs Ecosystem',
+            'Nuxtjs',
+            'ReactJs Ecosystem'
+          ]
         },
         {
           name: 'Apps',
           icon: 'fas fa-mobile-alt',
-          description: `Let me create apps multiplaform `
+          description: `Let me create you a great cross-platform app to improve your business brand and keep up the clients updated with push notifications.`,
+          stack: [
+            'Javascript',
+            'React Native Ecosystem',
+            'NativeBase',
+            'Learning Flutter :)'
+          ]
         },
         {
           name: 'IoT',
           icon: 'fas fa-wifi',
-          description: `Fringilla augue at maximus vesti Nam pulvinar vitae neque etrolling freight.`
+          description: `Let me meassurement, process and analyze interesting data to the clients and show in amazing UI dashboards.`,
+          stack: ['Embedded Devices', 'smart sensors', 'Arduino', 'NodeCmu']
         }
       ]
     }
