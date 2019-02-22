@@ -30,6 +30,14 @@
  */
 
 /*!
+<<<<<<< HEAD
+=======
+ * Font Awesome Free 5.0.13 by @fontawesome - https://fontawesome.com
+ * License - https://fontawesome.com/license (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
+ */
+
+/*!
+>>>>>>> c18eec5761b47b939f84476f483772c328a3c0ed
  * vue-no-ssr v1.1.1
  * (c) 2018-present egoist <0x142857@gmail.com>
  * Released under the MIT License.
