@@ -1,6 +1,7 @@
 <template>
-  <div>
-    <section class="container">
+  <div class="under-construction">
+    <h5>Under construction</h5>
+    <!-- <section class="container">
       <el-row type="flex" class="about-us">
         <el-col :span="11" :xs="12">
           <img
@@ -43,25 +44,25 @@
     <Blog
       :postmedium="postMedium"
     />
-    <Contact />
+    <Contact /> -->
   </div>
 </template>
 <script>
 import axios from 'axios'
-import Services from '../components/Services'
-import Experience from '../components/Experience'
-import MyProjects from '../components/Projects'
-import Blog from '../components/Blog'
-import Contact from '../components/Contact'
-import Networks from '../components/Networks'
+// import Services from '../components/Services'
+// import Experience from '../components/Experience'
+// import MyProjects from '../components/Projects'
+// import Blog from '../components/Blog'
+// import Contact from '../components/Contact'
+// import Networks from '../components/Networks'
 export default {
   components: {
-    Services,
-    Experience,
-    MyProjects,
-    Blog,
-    Contact,
-    Networks
+    // Services,
+    // Experience,
+    // MyProjects,
+    // Blog,
+    // Contact,
+    // Networks
   },
   async asyncData({ $axios }) {
     try {
@@ -119,5 +120,14 @@ p {
   color: #555;
   font-size: 14px;
   font-weight: 548;
+}
+
+.under-construction {
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  widows: 100%;
 }
 </style>

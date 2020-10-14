@@ -1,6 +1,10 @@
 <template>
-  <div>
-    <Header />
+  <div class="main-background">
+    <div class="main-box">
+      <img src="../assets/logo2.svg" alt="logjs" class="brand">
+      <h1 class="main-text">Coming Soon</h1>
+    </div>
+    <!-- <Header />
     <section class="main">
       <nuxt />
     </section>
@@ -14,14 +18,14 @@
             </a></span> by <span>Julian Salas.</span>
         </span>
       </div>
-    </footer>
+    </footer> -->
   </div>
 </template>
 <script>
-import Header from '../components/Header'
+// import Header from '../components/Header'
 export default {
   components: {
-    Header
+    // Header
   }
 }
 </script>
@@ -89,5 +93,33 @@ h2 {
 .main {
   width: 100%;
   flex: 1;
+}
+
+.main-background {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  background-color: #f5f5f5;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-box {
+  width: 45%;
+  height: 45%;
+  background-color: #4db6ac;
+}
+.brand {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 60%;
+  height: 50%;
+}
+
+.main-text {
+  color: white;
+  text-align: center;
+  padding-top: 10px;
 }
 </style>
