@@ -2,9 +2,9 @@
   <div>
     <section class="container">
       <el-row type="flex" class="about-us">
-        <el-col :span="11">
-          <img 
-            src="../assets/image/me3.jpeg" 
+        <el-col :span="11" :xs="12">
+          <img
+            src="../assets/image/me3.jpeg"
             alt="here go me"
             class="me"
           >
@@ -20,7 +20,7 @@
           </div>
           <el-row type="flex">
             <el-col :span="6">
-              <el-button 
+              <el-button
                 plain
                 size="large"
                 style=""
@@ -40,8 +40,8 @@
     <Services />
     <Experience />
     <MyProjects />
-    <Blog 
-      :postmedium="postMedium" 
+    <Blog
+      :postmedium="postMedium"
     />
     <Contact />
   </div>

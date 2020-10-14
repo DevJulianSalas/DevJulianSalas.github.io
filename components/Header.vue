@@ -4,7 +4,7 @@
       type="flex"
       class="header"
     >
-      <el-col :span="4">
+      <el-col :span="4" :x12="12">
         <img src="../assets/logo2.svg" alt="logjs" class="brand">
       </el-col>
       <el-col :span="20">
@@ -15,7 +15,7 @@
       type="flex"
       class="welcome-message"
     >
-      <el-col class="message-front" :span="24">
+      <el-col class="message-front" :span="24" :xs="12">
         Hello! <br>I'm a fullstack developer<span style="color:#f95231">
           .
         </span>

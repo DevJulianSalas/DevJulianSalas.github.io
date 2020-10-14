@@ -14,6 +14,7 @@
         :rules="rules2" 
         size="medium"
         style="width: 55%"
+        action="https://formspree.io/juliansalasco@gmail.com"
       >
         <el-col :span="12">
           <el-form-item
@@ -40,7 +41,6 @@
         <el-col :span="12">
           <el-form-item
             style="width: 95%;"
-            prop="phone"
           >
             <el-input
               v-model="payload.tel"
@@ -115,12 +115,6 @@ export default {
           }
         ],
         subject: [
-          {
-            required: true,
-            trigger: 'blur'
-          }
-        ],
-        phone: [
           {
             required: true,
             trigger: 'blur'
